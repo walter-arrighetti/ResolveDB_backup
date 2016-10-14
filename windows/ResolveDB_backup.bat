@@ -9,7 +9,7 @@ Echo **********************************************
 Echo.
 Set ResolveDBpath=C:\Users\Default\Documents\
 Set ResolveDBnetpath=\\NAS\ResolveDB\
-dir \\10.0.0.100\ResolveDB\ >> dirL.out
+dir %ResolveDBnetpath% >> dirL.out
 del dirL.out
 FOR /F %%a in ('WMIC Path Win32_LocalTime Get DayOfWeek /format:list ^| findstr "="') DO (set %%a)
 Echo Dumping all the PostgreSQL database for %DayOfWeek%th day of current week.....
