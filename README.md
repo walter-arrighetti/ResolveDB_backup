@@ -27,7 +27,7 @@ Windows installation
  * Copy your modified copy of file "ResolveDB_backup.bat" in the path specified in the above bullet-point.
  * Import file "ResolveDB_backup.xml" as a Scheduled Task (from an administrative account, e.g. 'Administrator'). Edit the just-imported task and re-enter run-as user credentials for an administrative account (that has permissions to run PostgreSQL "pg_dumpall" binary and has write access to the storage described in the third bullet-point).
 
-maCOS installation
+macOS installation
 ------------------
  * Make sure your DaVinci Resolve server's installation included the embedded PostgreSQL toolkit from the installer DMG.
  * If needed, edit line #10 of "ResolveDB_backup.sh" to change the path and/or version number of DaVinci Resolve PostgreSQL database (currently it is version 8.4 for macOS).
