@@ -12,13 +12,13 @@ Existing files are always overwritten, so only the latest 7 daily backups are re
 Resolve Studio clients can be active in the meantime and even connected to the centralized database, although access to database might be slower for a few minutes.
 
 
-LINUX INSTALLATION
-==================
+Linux installation
+------------------
  * Edit lines #11-12 of "ResolveDB_backup.sh" to change variables 'ResolveDBpath' and 'ResolveDBnetpath' to two paths where local and remote copies/dumps of the whole PostgreSQL database will be saved. For example (and by default), former is "/home/posgres/ResolveDB/", while latter is on a network share "/mnt/NAS/ResolveDB_backup/". N.B.: These paths should already exist [and be mounted]!
  * Run script "ResolveDB-backup-install.sh" from a 'root' or similar superuser account (that both has permission to run PostgreSQL "pg_dumpall" binary and has write access to the paths described in the above bullet-point). This also sets a relevant cron-job up.
 
-WINDOWS INSTALLATION
-====================
+Windows installation
+--------------------
  * Make sure your DaVinci Resolve server's installation included the embedded PostgreSQL toolkit from the installer EXE.
  * Install free 7-Zip archiver (64-bit binary) from "http://www.7-zip.org/" in the default path "C:\Program Files\7-Zip".
  * Edit lines #10-11 of "ResolveDB_backup.bat" to change variables 'ResolveDBpath' and 'ResolveDBnetpath' to two paths where local and remote copies/dumps of the whole PostgreSQL database will be saved, respectively. For example (and by default), former is "C:\Users\Default\Documents\ResolveDB", while latter is on a network share "\\FileServerIPaddr\NetworkShareName\ResolveDB". N.B.: These paths should already [be logged into and] exist!
@@ -27,8 +27,8 @@ WINDOWS INSTALLATION
  * Copy your modified copy of file "ResolveDB_backup.bat" in the path specified in the above bullet-point.
  * Import file "ResolveDB_backup.xml" as a Scheduled Task (from an administrative account, e.g. 'Administrator'). Edit the just-imported task and re-enter run-as user credentials for an administrative account (that has permissions to run PostgreSQL "pg_dumpall" binary and has write access to the storage described in the third bullet-point).
 
-MACOS INSTALLATION
-==================
+maCOS installation
+------------------
  * Make sure your DaVinci Resolve server's installation included the embedded PostgreSQL toolkit from the installer DMG.
  * If needed, edit line #10 of "ResolveDB_backup.sh" to change the path and/or version number of DaVinci Resolve PostgreSQL database (currently it is version 8.4 for macOS).
  * Edit lines #11-12 of "ResolveDB_backup.sh" to change variables 'ResolveDBpath' and 'ResolveDBnetpath' to two paths where local and remote copies/dumps of the whole PostgreSQL database will be saved, respectively. For example (and by default), former is "/Users/Default/Documents/ResolveDB", while latter is on a network share "/Volumes/ResolveDB_backup". N.B.: These paths should already exist or be mounted!
