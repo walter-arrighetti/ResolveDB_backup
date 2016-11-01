@@ -49,7 +49,7 @@
 	</Settings>
 	<Actions Context="Author">
 		<Exec>
-			<Command>C:\Users\w.arrighetti\ResolveDB_backup.bat</Command>
+			<Command>C:\Users\Default\ResolveDB_backup.bat</Command>
 		</Exec>
 	</Actions>
 </Task>
