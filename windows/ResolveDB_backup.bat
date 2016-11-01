@@ -7,8 +7,8 @@ Echo **==========================================**
 Echo **   Copyright (C) 2016 Walter Arrighetti   **
 Echo **********************************************
 Echo.
-Set ResolveDBpath=C:\Users\Default\Documents\
-Set ResolveDBnetpath=\\NAS\ResolveDB\
+Set ResolveDBpath=C:\Users\Default\Documents\ResolveDB\
+Set ResolveDBnetpath=\\FileServerIPaddr\NetworkShareName\ResolveDB\
 dir %ResolveDBnetpath% >> dirL.out
 del dirL.out
 FOR /F %%a in ('WMIC Path Win32_LocalTime Get DayOfWeek /format:list ^| findstr "="') DO (set %%a)
