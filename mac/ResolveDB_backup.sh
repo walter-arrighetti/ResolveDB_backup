@@ -8,7 +8,7 @@ echo **   Copyright (C) 2016 Walter Arrighetti   **
 echo **********************************************
 echo.
 PGDumpAll=/Library/PostgreSQL/8.4/bin/pg_dumpall
-ResolveDBpath=/Users/Default/Documents/
+ResolveDBpath=/Users/Default/Documents/ResolveDB_backup/
 ResolveDBnetpath=/Volumes/ResolveDB_backup/
 DOM=$(date +%d)
 DOW=($($DOM % 7)) |sed 's/^0*//'
