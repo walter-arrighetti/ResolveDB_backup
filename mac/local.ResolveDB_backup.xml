@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>local.ResolveDB_backup</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/bin/ResolveDB_backup.sh</string>
+	</array>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>2</integer>
+		<key>Minute</key>
+		<integer>0</integer>
+	</dict>
+	<key>Nice</key>
+	<integer>1</integer>
+	<key>OnDemand</key>
+	<false/>
+	<key>WorkingDirectory</key>
+	<string>/tmp</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/ResolveDB_backup.out</string>
+	<key>StandardErrorPath</key>
+	<string>/tmp/ResolveDB_backup.err</string>
+</dict>
+</plist>
