@@ -8,8 +8,8 @@ echo **   Copyright (C) 2016 Walter Arrighetti   **
 echo **********************************************
 echo.
 PGDumpAll=$(which pg_dumpall)
-ResolveDBpath=/root/
-ResolveDBnetpath=/mnt/NAS/
+ResolveDBpath=/home/posgres/ResolveDB_backup/
+ResolveDBnetpath=/mnt/NAS/ResolveDB_backup/
 DOM=$(date +%d)
 DOW=($($DOM % 7)) |sed 's/^0*//'
 echo Dumping all the PostgreSQL database for week day No.$DOW.....
