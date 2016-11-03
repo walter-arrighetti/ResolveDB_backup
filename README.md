@@ -10,7 +10,7 @@ Whatever OS is used, this script enables a task to be automatically run every da
 
 The single-dump file created as per above is called "0.pgSQL" for the first day-of-week backup (according to your server OS' locale), "1.pgSQL" for the second day-of-week, and so on up to "6.pgSQL" for the last day-of-week. These files are also compressed (using 7-Zip for Windows, which must be installed beforehand, or pre-instaled gzipped TAR archives for Linux/macOS).
 The dumps are also copied on a tier-2 path (usually meant to be a network folder on a remote redundant file server, which at that time should be already mounted with write permissions by the script's run-as user); this path is pointed to by 'ResolveDBnetpath' variable in the "ResolveDB_backup.[sh|bat]" OS-aware scripts.
-Finally, the script assumes your centralized *Resolve* database user is the default one, "posgres".
+Finally, the script assumes your centralized *Resolve* database user is the default one, "postgres".
 
 WARNING: By design, Windows version moves only the compressed copies of the dump in the tier-2 storage and keeps the uncompressed copies in tier-1 only.
 
