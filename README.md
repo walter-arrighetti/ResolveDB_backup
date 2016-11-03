@@ -6,16 +6,17 @@ Please use only the files in the subfolder of the operating system for your *Res
 
 Instead, the *DaVinci Resolve Studio* clients can be deployed on *any* available operating systems. Preferably, shared media should be located in centralized or co-located storage (SAN, NAS, Cloud). Consult [Blackmagic Design *DaVinci Resolve Reference Manual*](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion) for instructions on media storage and path management across heterogeneous OS clients with centralized database(s).
 
-Whatever OS is used, this script enables a task to be automatically run every day at 2:00am on the database server alone, where a complete dump of the PostgreSQL database (called 'PSQL' in Blackmagic Design terminology) is written in a single file and stored on a tier-1 path (usually meant to be on a freely accessible folder in the db server's local storage), pointed to by 'ResolveDBpath' variable in the "ResolveDB_backup.[sh|bat]" OS-aware scripts.
+Whatever OS is used, this script enables a task to be automatically run every day at 2:00am on the database server alone, where a complete dump of the PostgreSQL database ('QPSQL') is written in a single file and stored on a tier-1 path (usually meant to be on a freely accessible folder in the db server's local storage), pointed to by 'ResolveDBpath' variable in the "ResolveDB_backup.[sh|bat]" OS-aware scripts.
 
 The single-dump file created as per above is called "0.pgSQL" for the first day-of-week backup (according to your server OS' locale), "1.pgSQL" for the second day-of-week, and so on up to "6.pgSQL" for the last day-of-week. These files are also compressed (using 7-Zip for Windows, which must be installed beforehand, or pre-instaled gzipped TAR archives for Linux/macOS).
 The dumps are also copied on a tier-2 path (usually meant to be a network folder on a remote redundant file server, which at that time should be already mounted with write permissions by the script's run-as user); this path is pointed to by 'ResolveDBnetpath' variable in the "ResolveDB_backup.[sh|bat]" OS-aware scripts.
+Finally, the script assumes your centralized *Resolve* database user is the default one, "posgres".
 
-WARNING!: By design, Windows version moves only the compressed copies of the dump in the tier-2 storage and keeps the uncompressed copies in tier-1 only.
+WARNING: By design, Windows version moves only the compressed copies of the dump in the tier-2 storage and keeps the uncompressed copies in tier-1 only.
 
 Existing files are always overwritten, so only the latest 7 daily backups are retained.
 
-*Resolve Studio* clients can be active in the meantime and even connected to the centralized database, although access to database might be slower for a few minutes.
+*Resolve Studio* clients can be active in the meantime, although access to database might be slower for a few minutes.
 
 
 Linux installation
