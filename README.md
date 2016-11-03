@@ -1,8 +1,8 @@
 # ResolveDB_backup
-Scripts for weekly dumps and backups of (centralized) *DaVinci Resolve Studio* PSQL database; for Windows, macOS and Linux.
+Scripts for weekly dumps and backups of centralized *DaVinci Resolve* QPSQL database; for Windows, macOS and Linux.
 N.B.: No proficiencies of SQL databases are required to use these tools !
 
-Please use only the files in the subfolder of the operating system for your *Resolve* database server. For Windows and macOS, the installation of *DaVinci Resolve* in the centralized server must include the PostgreSQL embedded in the installer package; for all OSs, these tools must be run as a superuser/administrator account (real 'root' or 'Administrator' user).
+Please use only the files in the subfolder of the operating system for your *DaVinci Resolve* database server. For Windows and macOS, the installation of in the centralized server must include the PostgreSQL embedded in the installer package and the use of the default database user "postgres"; for all OSs, these tools must be run as a superuser/administrator account (real 'root' or 'Administrator' user).
 
 Instead, the *DaVinci Resolve Studio* clients can be deployed on *any* available operating systems. Preferably, shared media should be located in centralized or co-located storage (SAN, NAS, Cloud). Consult [Blackmagic Design *DaVinci Resolve Reference Manual*](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion) for instructions on media storage and path management across heterogeneous OS clients with centralized database(s).
 
@@ -10,7 +10,6 @@ Whatever OS is used, this script enables a task to be automatically run every da
 
 The single-dump file created as per above is called "0.pgSQL" for the first day-of-week backup (according to your server OS' locale), "1.pgSQL" for the second day-of-week, and so on up to "6.pgSQL" for the last day-of-week. These files are also compressed (using 7-Zip for Windows, which must be installed beforehand, or pre-instaled gzipped TAR archives for Linux/macOS).
 The dumps are also copied on a tier-2 path (usually meant to be a network folder on a remote redundant file server, which at that time should be already mounted with write permissions by the script's run-as user); this path is pointed to by 'ResolveDBnetpath' variable in the "ResolveDB_backup.[sh|bat]" OS-aware scripts.
-Finally, the script assumes your centralized *Resolve* database user is the default one, "postgres".
 
 WARNING: By design, Windows version moves only the compressed copies of the dump in the tier-2 storage and keeps the uncompressed copies in tier-1 only.
 
