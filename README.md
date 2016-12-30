@@ -42,4 +42,6 @@ macOS installation
  * If 'root' user is enabled/available (as per above bullet-point), open Terminal, type "sudo su - root", hit Enter, then type the root password and make sure no error messages appear.
  * Make the script "ResolveDB-backup-install.sh" executable by typing command "chmod +x ResolveDB-backup-install.sh" from the path where all these files are.
  * Run the above script as "./ResolveDB-backup-install.sh" and check no error messages are output. This also configures macOS 'launchd' daemon to run the scheduled task.
- * To uninstall, repeat all the above passages related to the script "ResolveDB-backup-uninstall.sh" instead.
+ 
+ 
+ To uninstall, repeat all the above passages related to the script "ResolveDB-backup-uninstall.[sh|bat]" instead, for the relevant server's OS.
