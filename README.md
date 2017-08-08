@@ -1,8 +1,8 @@
 # ResolveDB_backup
-Scripts for weekly dumps and backups of centralized *DaVinci Resolve* QPSQL database; for Windows, macOS and Linux.
+Scripts for weekly dumps and backups of centralized Blackmagic Design *DaVinci Resolve* QPSQL database; for Windows, macOS and Linux.
 N.B.: No proficiencies of SQL databases are required to use these tools !
 
-Please use only the files in the subfolder of the operating system for your *DaVinci Resolve* database server. For Windows and macOS, the installation of in the centralized server must include the PostgreSQL embedded in the installer package and the use of the default database user "postgres"; for all OSs, these tools must be run as a superuser/administrator account (real 'root' or 'Administrator' user).
+Please only run from within the your *DaVinci Resolve* database server host. For Windows and macOS, the installation of the centralized server must include the PostgreSQL software included in the installer package from Blackmagic Design and the use of the default database user `postgres`; for all OSs, these tools must be run as a superuser/administrator account (real 'root' or 'Administrator' user).
 
 Instead, the *DaVinci Resolve Studio* clients can be deployed on *any* available operating systems. Preferably, shared media should be located in centralized or co-located storage (SAN, NAS, Cloud). Consult [Blackmagic Design *DaVinci Resolve Reference Manual*](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion) for instructions on media storage and path management across heterogeneous OS clients with centralized database(s).
 
