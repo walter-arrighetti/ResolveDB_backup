@@ -31,7 +31,7 @@ Windows installation
  * Edit lines #10-11 of `ResolveDB_backup.bat` to change variables 'ResolveDBpath' and 'ResolveDBnetpath' to two paths where local and remote copies/dumps of the whole PostgreSQL database will be saved, respectively. For example (and by default), former is `C:\Users\Default\Documents\ResolveDB`, while latter is on a network share `\\FileServerIPaddr\NetworkShareName\ResolveDB`. N.B.: These paths should already exist and [be logged into]!
  * If needed, edit line #16 of `ResolveDB_backup.bat` to change the path and/or version number of *DaVinci Resolve* PostgreSQL database (currently it is version 9.2 for Windows).
  * Edit line #52 of `ResolveDB_backup.xml` by putting the pathname where your final version of script `ResolveDB_backup.bat` will be definitely copied in (currently is `C:\Users\Default\ResolveDB_backup.bat`). This path should not be easily accessible to standard users (to avoid unwanted file corruption/deletion).
- * Edit line #16 of `ResolveDB_backup.bat` by changing the `--database` variable
+ * Edit line #16 of `ResolveDB_backup.bat` by changing the ` "resolve" part of the --database` variable
  * Copy your modified copy of file `ResolveDB_backup.bat` in the path specified in the above bullet-point.
  * Import file `ResolveDB_backup.xml` as a _Scheduled Task_ (from an administrative account, e.g. 'Administrator'). Edit the just-imported task and re-enter run-as user credentials for an administrative account (that has permissions to run PostgreSQL *'pg_dumpall'* binary and has write access to the storage described in the third bullet-point).
 
